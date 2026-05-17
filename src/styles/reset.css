@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    background-color: #0B0D17;
+    color: #e8e8e8;
+    font-family: 'PyeojinGothic';
+    padding: 0 200px 0;
+    height: 5000px;
+    
+}
+html {
+  scroll-behavior: smooth;
+}
+* { box-sizing: border-box; }
+img { vertical-align: middle; }
+a {color: white; text-decoration: none;}
+ul, li { margin: 0; padding: 0; list-style-type: none; }
+h1, h2, h3, p, figure { margin: 0; }
+table { border-collapse: collapse; }

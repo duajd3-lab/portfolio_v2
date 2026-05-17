@@ -1,0 +1,259 @@
+@import url('./styles/reset.css');
+
+.App {
+  position: relative;
+  min-height: 100vh;
+
+  background: #0B0D17;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  isolation: isolate;
+}
+
+.App::after {
+  content: "";
+
+  position: fixed;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background: rgba(98, 108, 255, 0.32);
+
+  filter: blur(150px);
+
+  left: -250px;
+  bottom: 0px;
+
+  z-index: -1;
+
+}
+
+.App::before {
+  content: "";
+
+  position: fixed;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background: rgba(98, 108, 255, 0.22);
+
+  filter: blur(150px);
+
+  top: -200px;
+  right: -200px;
+
+  z-index: -1;
+}
+
+.hero {
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.heroInner {
+  width: 100%;
+  max-width: 1400px;
+
+  padding-top: 180px;
+  padding-left: 140px;
+  padding-right: 140px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.mainTitle {
+  font-size: 60px;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  display: inline-block;
+
+  background: linear-gradient(90deg,
+      #69BEFB 0%,
+      #7E8E9D 50%,
+      #3A4AF3 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 메뉴 */
+
+.menu {
+  width: 500px;
+  height: 60px;
+
+  margin: 300px auto 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: sticky;
+  top: 100px;
+
+
+  z-index: 999;
+  background: rgba(15, 15, 25, 0.5);
+
+}
+
+.menu a {
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #69BEFB;
+}
+
+/* 아래 화살표 */
+
+.scroll {
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-size: 28px;
+  color: #8D8DFF;
+
+  animation: upDown 1.8s infinite;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* About 부분 */
+.profile {
+  padding-top: 180px;
+  padding-left: 180px;
+
+  display: flex;
+}
+
+.boxTitle {
+  >h3 {
+    font-size: 50px;
+  }
+}
+
+.profile-txt {
+  padding: 100px;
+  font-size: 20px;
+
+  p>span {
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+
+.value-simple {
+  padding: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.value-item {
+  padding: 15px 28px;
+  border-radius: 12px;
+
+  border: 1px solid #9193FF;
+  //background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(46, 48, 59, 0.7);
+    transform: translateX(8px);
+  }
+}
+
+.skills {
+  padding-top: 180px;
+  padding-left: 180px;
+
+  .content {
+    >h4 {
+      font-size: 24px;
+      border-bottom: 1px solid #9193FF;
+      width: 410px;
+      color: rgb(249, 242, 255);
+    }
+
+    .svgIcons {
+      display: flex;
+      gap: 20px;
+    }
+
+    ul {
+      line-height: 2;
+      padding-top: 20px;
+
+      >p {
+        color: #ab67f0;
+        font-size: 20px;
+        font-weight: bold;
+        span{
+           font-size: 13px;
+           color: white;
+           padding-left: 10px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.skill-1{
+  display: flex;
+  gap: 250px;
+}
+
+
+// === 프로젝트 ===
+.project{
+  padding-top: 180px;
+  padding-left: 180px;
+
+}
