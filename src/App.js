@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import './App.scss';
 
+import projectData from './json/project.json';
+import Popup from './comp/Popup';
+
 function App() {
 
+  const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
@@ -138,41 +142,76 @@ function App() {
 
 
       <section id="project" className='project'>
+
         <div>
           <div className='boxTitle'>
             <h3>PROJECT</h3>
           </div>
         </div>
 
-        <div className='p_content'>
-          <div className='p_img'>
-            <img src='./project/weather.PNG' />
-          </div>
-          <div className='p_text'>
-            <h4>Weather Mood</h4>
-            <ul>
-              <li>날씨 API 를 활용하여 코디나 음악 등을 추천받는 웹 애플리케이션 </li>
-              <li>LocalStorge를 활용하여 데이터 연동하여 개발 </li>
-            </ul>
-            <h5>SKILLS</h5>
-            <div className='skill-list'>
-              <div className='s-listUp'>HTML</div>
-              <div className='s-listUp'>JavaScript</div>
-              <div className='s-listUp'>CSS</div>
+<div className='projectData'>
+        {projectData.map((item, index) => (
+          <div className='p_content' key={index}>
+
+            <div className='p_img'>
+              <img src={item.images[0]} alt={item.title} />
             </div>
-          </div>
 
-          <div className='project-btn'>
-            <button >
-              <img src='./svg/link.svg' className='linkSvg' /> GITHUB
-            </button>
-            <button>자세히 보기</button>
-          </div>
+            <div className='p_text'>
 
+              <h4>{item.title}</h4>
+
+              <ul>
+                {item.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+
+              <h5>SKILLS</h5>
+
+              <div className='skill-list'>
+                {item.skills.map((skill, idx) => (
+                  <div className='s-listUp' key={idx}>
+                    {skill}
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
+            <div className='project-btn'>
+
+              <button
+                onClick={() =>
+                  window.open(item.site, '_blank', 'noopener,noreferrer')
+                }
+              >
+                <img src='./svg/link.svg' className='linkSvg' />
+                LINK
+              </button>
+
+              <button
+                onClick={() => {
+                  setSelectedItem(item);
+                  setOpen(true);
+                }}
+              >
+                자세히 보기
+              </button>
+
+            </div>
+
+          </div>
+        ))}
         </div>
 
-
       </section>
+      {open && selectedItem && (
+  <Popup
+    setOpen={setOpen}
+    item={selectedItem}
+  />
+)}
 
 
     </div>

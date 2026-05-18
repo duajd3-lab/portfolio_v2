@@ -161,14 +161,16 @@
 /* About 부분 */
 .profile {
   padding-top: 180px;
-  padding-left: 180px;
+  padding-left: 200px;
 
   display: flex;
+  gap: 50px;
 }
 
 .boxTitle {
   >h3 {
     font-size: 50px;
+    padding-bottom: 40px;
   }
 }
 
@@ -210,7 +212,7 @@
 
 .skills {
   padding-top: 180px;
-  padding-left: 180px;
+  padding-left: 200px;
 
   .content {
     >h4 {
@@ -247,19 +249,29 @@
 
 .skill-1{
   display: flex;
-  gap: 250px;
+  gap: 280px;
 }
 
 
 // === 프로젝트 ===
-.project{
+.project {
   padding-top: 180px;
-  padding-left: 180px;
+  padding-left: 200px;
+  padding-right: 180px;
+
+  
+.projectData{
+  display: grid;
+
+  grid-template-columns: repeat(2, 430px);
+
+  gap: 150px;
+}
 
 }
 
 .p_content{
-  width: 445px; height: 515px;
+  width: 460px; height: 515px;
   border: 1px solid #9193FF;
   background-color: rgba(145, 147, 255, 0.2);
   border-radius: 10px;
@@ -267,12 +279,12 @@
   
   .p_text{
     text-align: left;
-    padding-left: 40px;
+    padding-left: 50px;
   }
 
   h4{
     font-size: 20px;
-    color: #9193FF;
+    color: #6bebd6;
     margin: 0;
     padding: 15px 0 10px;
   }
@@ -283,8 +295,8 @@
     padding: 15px 0 10px;
   }
   ul >li{
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 22px;
   }
 
   .skill-list{

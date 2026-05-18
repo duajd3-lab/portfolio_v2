@@ -1,4 +1,4 @@
-import '../popup.scss'
+import '../styles/popup.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-import CloseIcon from '@mui/icons-material/Close';
+//import CloseIcon from '@mui/icons-material/Close';
 function Popup({ setOpen, item }) {
 
     const modal = useRef();
@@ -32,7 +32,7 @@ function Popup({ setOpen, item }) {
 
             <div className='container' ref={container} onClick={(e) => e.stopPropagation()} >
                 <span>{item.title}</span>
-                <CloseIcon
+                {/* <CloseIcon
                     className="close-icon"
                     onClick={() => setOpen(false)}
                 />
@@ -76,7 +76,7 @@ function Popup({ setOpen, item }) {
                         <div className='tt'>
                             <span>SKILLS</span>
                         </div>
-                        <div className="skills">
+                        <div className="p-skills">
                             {
                                 item.skills.map((skill, index) => {
                                     return <div key={index}>{skill}</div>
@@ -102,10 +102,12 @@ function Popup({ setOpen, item }) {
                                 <span>개발인원</span>
                             </div>
                             <div className='tt-text'>
-                            <div>{item.team}</div>
+                                
+                                    <div >{item.team}</div>
+                                
+                            </div>
                         </div>
-                        </div>
-                        
+
                     </section>
 
                     <section className='sec-2'>
@@ -117,7 +119,7 @@ function Popup({ setOpen, item }) {
                         </div>
                     </section>
 
-                    
+
                     <section className='sec-1'>
                         <div className='tt3'>
                             <div>
