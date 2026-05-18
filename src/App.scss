@@ -6,7 +6,7 @@
 
   background: #0B0D17;
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
   overflow-y: visible;
 
   isolation: isolate;
@@ -112,7 +112,7 @@
   align-items: center;
 
   position: sticky;
-  top: 100px;
+  top: 50px;
 
 
   z-index: 999;
@@ -256,4 +256,89 @@
   padding-top: 180px;
   padding-left: 180px;
 
+}
+
+.p_content{
+  width: 445px; height: 515px;
+  border: 1px solid #9193FF;
+  background-color: rgba(145, 147, 255, 0.2);
+  border-radius: 10px;
+  text-align: left;
+  
+  .p_text{
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  h4{
+    font-size: 20px;
+    color: #9193FF;
+    margin: 0;
+    padding: 15px 0 10px;
+  }
+  h5{
+    font-size: 18px;
+    margin-top: 10px;
+    margin: 0;
+    padding: 15px 0 10px;
+  }
+  ul >li{
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .skill-list{
+    display: flex;
+    gap: 5px;
+    .s-listUp{
+      width: auto;
+      font-size: 12px;
+      border: 1px solid #314CFF;
+      border-radius: 18px;
+      padding:10px;
+    }
+
+  }
+
+  .p_img{
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    img{
+      width: 366px; height: 221px;
+      border: 10px solid black;
+      border-radius: 20px;
+    }
+  }
+}
+
+.project-btn{
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.linkSvg{
+  width: 15px; height: 15px;
+}
+
+.project-btn button{
+  position: relative;
+  overflow: hidden;
+ 
+
+  width: 100px; height: 35px;
+  border: none;
+  border-radius: 5px;
+
+  
+  gap: 8px; /* 아이콘과 글자 간격 */
+  background: linear-gradient(180deg, #65BAD2, #4773E0);
+}
+
+.project-btn button:hover {
+  background: linear-gradient(180deg, #4773E0, #65BAD2);
 }

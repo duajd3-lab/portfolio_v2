@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import './App.scss';
 
 function App() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <div className="App">
 
@@ -16,10 +20,6 @@ function App() {
             <br />
             김나영입니다."
           </p>
-
-
-
-
 
         </section>
 
@@ -144,15 +144,31 @@ function App() {
           </div>
         </div>
 
-        <div>
-          <div>
+        <div className='p_content'>
+          <div className='p_img'>
             <img src='./project/weather.PNG' />
           </div>
-          <h4>Weather Mood</h4>
-          <ul>
-            <li>날씨 API 를 활용하여 코디나 음악 등을 추천받는 웹 애플리케이션 </li>
-            <li>LocalStorge를 활용하여 데이터 연동하여 개발 </li>
-          </ul>
+          <div className='p_text'>
+            <h4>Weather Mood</h4>
+            <ul>
+              <li>날씨 API 를 활용하여 코디나 음악 등을 추천받는 웹 애플리케이션 </li>
+              <li>LocalStorge를 활용하여 데이터 연동하여 개발 </li>
+            </ul>
+            <h5>SKILLS</h5>
+            <div className='skill-list'>
+              <div className='s-listUp'>HTML</div>
+              <div className='s-listUp'>JavaScript</div>
+              <div className='s-listUp'>CSS</div>
+            </div>
+          </div>
+
+          <div className='project-btn'>
+            <button >
+              <img src='./svg/link.svg' className='linkSvg' /> GITHUB
+            </button>
+            <button>자세히 보기</button>
+          </div>
+
         </div>
 
 
