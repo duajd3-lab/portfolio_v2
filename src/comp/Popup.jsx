@@ -111,13 +111,16 @@ function Popup({ setOpen, item }) {
                     </section>
 
                     <section className='sec-2'>
-                        <div className='tt2'>
-                            <span>역할</span>
-                        </div>
-                        <div className='tt-text'>
-                            <div>{item.work}</div>
-                        </div>
-                    </section>
+  <div className='tt2'>
+    <span>역할</span>
+  </div>
+
+  <div className='tt-text'>
+    {item.work.map((work, index) => (
+      <div key={index}>{work}</div>
+    ))}
+  </div>
+</section>
 
 
                     <section className='sec-1'>
@@ -134,19 +137,32 @@ function Popup({ setOpen, item }) {
                     </section>
 
                     <section className='sec-1 troubleshooting'>
-                        <div className='tt'>
-                            <span>트러블 슈팅</span>
-                            <ul>
-                                {item.troubleshooting.map((t, index) => (
-                                    <li key={index}>
-                                        [문제 상황] - {t.problem}<br />
-                                        [해결 방법] - {t.solution}<br />
-                                        [성과] - {t.result}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </section>
+  <div className='tt'>
+    <span>트러블 슈팅</span>
+
+    <ul>
+      {item.troubleshooting.map((t, index) => (
+        <li key={index}>
+          <strong>[문제 상황]</strong>
+          <p>{t.problem}</p>
+
+          {t.cause && (
+            <>
+              <strong>[원인]</strong>
+              <p>{t.cause}</p>
+            </>
+          )}
+
+          <strong>[해결 방법]</strong>
+          <p>{t.solution}</p>
+
+          <strong>[성과]</strong>
+          <p>{t.result}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
                 </div>
 
 

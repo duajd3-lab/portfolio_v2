@@ -19,11 +19,22 @@ function App() {
 
         <section className="heroInner">
 
-          <p className="mainTitle">
-            "지속적인 개선을 통해 성장하는 개발자
-            <br />
-            김나영입니다."
-          </p>
+          <div className="heroCrossText">
+            <p className="bgText bgTextOne">
+              I am Nayoung Kim, a frontend developer <br />
+              who implements high-quality web experiences <br />
+            </p>
+
+            <p className="bgText bgTextTwo">
+              through UI that considers user flow <br />
+              and smooth interactions.
+            </p>
+
+            <h1>
+              지속적인 개선을 통해 성장하는 개발자 <br />
+              김나영입니다.
+            </h1>
+          </div>
 
         </section>
 
@@ -149,69 +160,66 @@ function App() {
           </div>
         </div>
 
-<div className='projectData'>
-        {projectData.map((item, index) => (
-          <div className='p_content' key={index}>
+        <div className='projectData'>
+          {projectData.map((item, index) => (
+            <div className='p_content' key={index}>
 
-            <div className='p_img'>
-              <img src={item.images[0]} alt={item.title} />
-            </div>
+              <div className='p_img'>
+                <img src={item.images[0]} alt={item.title} />
+              </div>
 
-            <div className='p_text'>
+              <div className='p_text'>
 
-              <h4>{item.title}</h4>
+                <h4>{item.title}</h4>
+                <p>{item.subTitle}</p>
 
-              <ul>
-                {item.features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
-                ))}
-              </ul>
+               
 
-              <h5>SKILLS</h5>
+                <h5>SKILLS</h5>
 
-              <div className='skill-list'>
-                {item.skills.map((skill, idx) => (
-                  <div className='s-listUp' key={idx}>
-                    {skill}
-                  </div>
-                ))}
+                <div className='skill-list'>
+                  {item.skills.map((skill, idx) => (
+                    <div className='s-listUp' key={idx}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+
+              <div className='project-btn'>
+
+                <button
+                  onClick={() =>
+                    window.open(item.site, '_blank', 'noopener,noreferrer')
+                  }
+                >
+                  <img src='./svg/link.svg' className='linkSvg' />
+                  LINK
+                </button>
+
+                <button
+                  onClick={() => {
+                    setSelectedItem(item);
+                    setOpen(true);
+                  }}
+                >
+                  자세히 보기
+                </button>
+
               </div>
 
             </div>
-
-            <div className='project-btn'>
-
-              <button
-                onClick={() =>
-                  window.open(item.site, '_blank', 'noopener,noreferrer')
-                }
-              >
-                <img src='./svg/link.svg' className='linkSvg' />
-                LINK
-              </button>
-
-              <button
-                onClick={() => {
-                  setSelectedItem(item);
-                  setOpen(true);
-                }}
-              >
-                자세히 보기
-              </button>
-
-            </div>
-
-          </div>
-        ))}
+          ))}
         </div>
 
       </section>
       {open && selectedItem && (
-  <Popup
-    setOpen={setOpen}
-    item={selectedItem}
-  />
-)}
+        <Popup
+          setOpen={setOpen}
+          item={selectedItem}
+        />
+      )}
 
 
     </div>
