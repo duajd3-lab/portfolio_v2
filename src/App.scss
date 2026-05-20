@@ -223,7 +223,7 @@
   align-items: center;
 
   position: sticky;
-  top: 50px;
+  top: 40px;
 
 
   z-index: 999;
@@ -293,10 +293,26 @@
     font-weight: bold;
     font-size: 25px;
   }
+  .aboutMore{
+    display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  text-decoration: none;
+  color: inherit;
+    &:hover{
+      width: 160px; 
+      border-radius: 12px;
+      background: rgba(122, 130, 177, 0.253);
+     
+    }
+  }
 }
 
 .value-simple {
-  padding: 120px;
+  padding: 130px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -477,6 +493,106 @@
 .project-btn button:hover {
   background: linear-gradient(180deg, #4773E0, #65BAD2);
 }
+
+
+// contact 부분
+.contact{
+  height: 380px;
+  display: flex;
+  gap: 550px;
+padding-top: 150px;
+  justify-content: center;
+}
+
+.contactTitle {
+  //position: absolute;
+  top: 45px;
+  right: 12%;
+  text-align: right;
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    font-family: serif;
+  }
+
+   .meText {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .meText::before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: #9193ff;
+  }
+}
+
+.contactText {
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    &:hover {
+      color: #9193FF;
+      transform: translateX(5px);
+    }
+
+    img {
+      width: 18px;
+    }
+  }
+}
+
+.copyMsg{
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #9193FF;
+  animation: fade 0.3s ease;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer{
+  >p{
+    color: gray;
+     padding: 30px 200px 50px;
+    font-size: 13px;
+  }
+
+  .footerText{
+    width: 1520px;
+    border-bottom: 1px solid #9193FF;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 /* ======  반응형 ====== */

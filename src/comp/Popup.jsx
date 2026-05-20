@@ -32,10 +32,7 @@ function Popup({ setOpen, item }) {
 
             <div className='container' ref={container} onClick={(e) => e.stopPropagation()} >
                 <span>{item.title}</span>
-                {/* <CloseIcon
-                    className="close-icon"
-                    onClick={() => setOpen(false)}
-                />
+                
 
                 <>
                     <Swiper
@@ -67,9 +64,21 @@ function Popup({ setOpen, item }) {
 
 
 
-                {/* <div className="image-container">
-                    <img src='/imgs/weather.png' className='screen' />
-                    </div> */}
+               
+
+                    <section className='sec-1'>
+                        <div className='tt2'>
+                            <div>
+                                <span>개발 기간</span>
+                            </div>
+                            <div className='tt-text'>
+
+                                <div >{item.period}</div>
+
+                            </div>
+                        </div>
+
+                    </section>
 
                 <div className="details">
                     <section className='sec-1'>
@@ -102,25 +111,25 @@ function Popup({ setOpen, item }) {
                                 <span>개발인원</span>
                             </div>
                             <div className='tt-text'>
-                                
-                                    <div >{item.team}</div>
-                                
+
+                                <div >{item.team}</div>
+
                             </div>
                         </div>
 
                     </section>
 
                     <section className='sec-2'>
-  <div className='tt2'>
-    <span>역할</span>
-  </div>
+                        <div className='tt2'>
+                            <span>역할</span>
+                        </div>
 
-  <div className='tt-text'>
-    {item.work.map((work, index) => (
-      <div key={index}>{work}</div>
-    ))}
-  </div>
-</section>
+                        <div className='tt-text'>
+                            {item.work.map((work, index) => (
+                                <div key={index}>{work}</div>
+                            ))}
+                        </div>
+                    </section>
 
 
                     <section className='sec-1'>
@@ -137,32 +146,32 @@ function Popup({ setOpen, item }) {
                     </section>
 
                     <section className='sec-1 troubleshooting'>
-  <div className='tt'>
-    <span>트러블 슈팅</span>
+                        <div className='tt'>
+                            <span>트러블 슈팅</span>
 
-    <ul>
-      {item.troubleshooting.map((t, index) => (
-        <li key={index}>
-          <strong>[문제 상황]</strong>
-          <p>{t.problem}</p>
+                            <ul>
+                                {item.troubleshooting.map((t, index) => (
+                                    <li key={index}>
+                                        <strong>[문제 상황]</strong>
+                                        <p>{t.problem}</p>
 
-          {t.cause && (
-            <>
-              <strong>[원인]</strong>
-              <p>{t.cause}</p>
-            </>
-          )}
+                                        {t.cause && (
+                                            <>
+                                                <strong>[원인]</strong>
+                                                <p>{t.cause}</p>
+                                            </>
+                                        )}
 
-          <strong>[해결 방법]</strong>
-          <p>{t.solution}</p>
+                                        <strong>[해결 방법]</strong>
+                                        <p>{t.solution}</p>
 
-          <strong>[성과]</strong>
-          <p>{t.result}</p>
-        </li>
-      ))}
-    </ul>
-  </div>
-</section>
+                                        <strong>[성과]</strong>
+                                        <p>{t.result}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </section>
                 </div>
 
 

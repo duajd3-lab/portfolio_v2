@@ -2,7 +2,7 @@
     {
         "title": "Weather Mood",
         "subTitle": "날씨 기반 코디·음악 추천 웹 서비스",
-        "period": "2025.00 - 2025.00",
+        "period": "2026.02 - 2026.03",
         "images": [
             "/imgs/weather.png",
             "/imgs/weather2.png",
@@ -36,7 +36,7 @@
     {
   "title": "StorePilot",
   "subTitle": "AI 예측을 활용하여 매장 데이터를 통합적으로 관리할 수 있는 매장 관리 플랫폼",
-  "period": "2026.04 - 2026.05",
+  "period": "2026.04.14 - 2026.05.08",
   "team": "5인 팀 프로젝트",
   "role": "Frontend / UI 구현 / 메뉴 관리 페이지 담당",
   "work": [

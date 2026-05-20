@@ -1,0 +1,149 @@
+@import url('./reset.css');
+
+.aboutPage {
+  min-height: 100vh;
+  padding: 55px 12%;
+  background: #11131f;
+  color: #fff;
+  position: relative;
+}
+
+.backBtn {
+  position: absolute;
+  top: 55px;
+  left: 12%;
+
+  img {
+    width: 42px;
+  }
+}
+
+.aboutTitle {
+  position: absolute;
+  top: 45px;
+  right: 12%;
+  text-align: right;
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    font-family: serif;
+  }
+
+   .meText {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .meText::before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: #9193ff;
+  }
+}
+
+.aboutInner {
+  display: flex;
+  gap: 60px;
+  margin-top: 110px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #696cff;
+}
+
+.profileCard {
+  width: 290px;
+  padding: 40px 35px;
+  border: 1px solid #9193ff;
+  border-radius: 12px;
+  background: rgba(145, 147, 255, 0.08);
+
+  .profileImg {
+    width: 150px;
+    height: 170px;
+    margin: 0 auto 30px;
+    border: 1px solid #9193ff;
+    background: #454750;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+    list-style: none;
+    padding: 0;
+    >li{
+        display: flex;
+        gap: 10px;
+        padding-left: 20px;
+    }
+  }
+}
+
+.introduce {
+  flex: 1;
+  max-width: 680px;
+
+  .introName {
+    margin-bottom: 40px;
+
+    span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin-top: 8px;
+      color: #9193ff;
+      font-size: 28px;
+    }
+  }
+
+  h4 {
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #ddd;
+    margin-bottom: 16px;
+  }
+}
+
+.educationBox {
+  margin-top: 40px;
+  padding: 35px 40px;
+  border: 1px solid #9193ff;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+
+  h3 {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+
+  .eduList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    p {
+      display: flex;
+      gap: 80px;
+      font-size: 14px;
+    }
+
+    span {
+      color: #ccc;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+}

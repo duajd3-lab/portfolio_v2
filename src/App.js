@@ -4,10 +4,16 @@ import './App.scss';
 import projectData from './json/project.json';
 import Popup from './comp/Popup';
 
-function App() {
+import AboutMe from './comp/AboutMe';
+
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+
+function Home() {
 
   const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   return (
     <div className="App">
@@ -63,9 +69,12 @@ function App() {
             </p>
             <p><span>김나영</span> 입니다.</p>
             <br />
-            <div>
-              <p>ABOUT MORE </p>
-            </div>
+
+            <Link to="/aboutme" className='aboutMore'>
+              <p>ABOUT MORE</p>
+              <img src='./svg/Arrow_right.svg' alt='arrow' />
+            </Link>
+
           </div>
         </div>
 
@@ -173,7 +182,7 @@ function App() {
                 <h4>{item.title}</h4>
                 <p>{item.subTitle}</p>
 
-               
+
 
                 <h5>SKILLS</h5>
 
@@ -222,7 +231,71 @@ function App() {
       )}
 
 
+      <section id="contact">
+
+        <div className='contact'>
+          <div className="contactTitle">
+            <h1>
+              Contact <br />
+              <span className='meText'>
+                Me
+              </span>
+            </h1>
+          </div>
+
+          <div className="contactText">
+            <p className='pText'
+              onClick={() => {
+                window.location.href = 'mailto:duajd3@gmail.com';
+              }}
+            >
+              <img src='./svg/contact-mail.svg' alt='mail' 
+              onClick={(e) => {
+                e.stopPropagation(); //아이콘 클릭 시 메일 보내기(mailto)까지 같이 실행되는 걸 막기 위해서
+                navigator.clipboard.writeText('duajd3@gmail.com'); 
+                setCopied(true);
+                setTimeout(()=>{
+                  setCopied(false);
+                }, 2000);
+                }} />
+              duajd3@gmail.com
+            </p>
+
+            {copied && <span className='copyMsg'>복사되었습니다!</span>}
+
+            <p
+              onClick={() => {
+                window.open('https://github.com/duajd3-lab', '_blank');
+              }}
+            >
+              <img src='./svg/contact-arrow.svg' alt='github' />
+              GitHub
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <section className='footer'>
+        <div className='footerText'></div>
+        <p>© 2026 nayoung's portfoilo. All rights reserved.</p>
+      </section>
+
+
+
+
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutme" element={<AboutMe />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
