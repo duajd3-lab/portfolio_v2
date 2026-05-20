@@ -282,6 +282,7 @@
   >h3 {
     font-size: 50px;
     padding-bottom: 40px;
+    font-family: serif;
   }
 }
 
@@ -497,10 +498,9 @@
 
 // contact 부분
 .contact{
-  height: 380px;
   display: flex;
-  gap: 550px;
-padding-top: 150px;
+  gap: 400px;
+padding: 240px 0 240px;
   justify-content: center;
 }
 
@@ -511,7 +511,7 @@ padding-top: 150px;
   text-align: right;
 
   h1 {
-    font-size: 42px;
+    font-size: 50px;
     line-height: 1.1;
     font-family: serif;
   }
@@ -537,7 +537,7 @@ padding-top: 150px;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
     cursor: pointer;
 
@@ -586,6 +586,10 @@ padding-top: 150px;
   }
 }
 
+/* ===== 모바일 햄버거 ===== */
+.hamburger {
+  display: none;
+}
 
 
 
@@ -595,28 +599,459 @@ padding-top: 150px;
 
 
 
-/* ======  반응형 ====== */
+
+
+
+/* ===== 반응형 ===== */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  body{
+    padding: 0;;
+  }
+  .heroInner {
+    padding: 140px 60px 0;
+    h1{
+      font-size: 48px;
+    }
+  }
+
+  .profile,
+  .skills,
+  .project {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .profile {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .profile-txt,
+  .value-simple {
+    padding: 40px 0;
+  }
+
+  .skill-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .skills .content > h4 {
+    width: 100%;
+    font-size: 25px;
+    width: 390px;
+  }
+
+  .skills .content .svgIcons {
+    flex-wrap: wrap;
+  }
+
+  .svgIcons {
+    flex-wrap: wrap;
+    gap: 10px !important;
+
+    margin-bottom: 16px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .project .projectData {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+  }
+
+  .p_content {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .contact {
+    gap: 120px;
+  }
+
+  .footer .footerText {
+    width: 100%;
+  }
+}
+
+
+/* 모바일 */
 @media (max-width: 768px) {
+  .App {
+    overflow-x: hidden;
+  }
+
+  .heroInner {
+    padding: 120px 24px 0;
+  }
+
   .heroCrossText {
-    min-height: 260px;
+    min-height: 240px;
   }
 
   .heroCrossText h1 {
-    font-size: 40px;
-    letter-spacing: -2px;
+    font-size: 38px;
+    line-height: 1.35;
   }
 
   .bgText {
-    font-size: 72px;
+    font-size: 68px;
   }
 
-  .bgTextOne {
-    top: 30px;
-    left: -70%;
+  .menu {
+    width: calc(100% - 40px);
+    height: 54px;
+    margin-top: 120px;
+    top: 20px;
   }
 
-  .bgTextTwo {
-    bottom: 35px;
-    right: -90%;
+  .menu a {
+    font-size: 12px;
+  }
+
+  .profile,
+  .skills,
+  .project {
+    padding: 120px 24px 0;
+  }
+
+  .boxTitle > h3 {
+    font-size: 38px;
+    padding-bottom: 30px;
+  }
+
+  .profile {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-txt {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  .profile-txt p > span {
+    font-size: 20px;
+  }
+
+  .value-simple {
+    padding: 30px 0;
+  }
+
+  .skills .content > h4 {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .skills .content .svgIcons {
+    flex-wrap: wrap;
+  }
+
+  /* ===== SKILLS 모바일 4분할 ===== */
+ .skills {
+    padding: 120px 24px 0;
+  }
+   .skill-1 {
+    //display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+  }
+
+   .content {
+    padding: 0 18px;
+
+    border: 1px solid rgba(145, 147, 255, 0.4);
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.04);
+
+    backdrop-filter: blur(10px);
+
+    min-height: 320px;
+  }
+
+  .content h4 {
+    width: 100% !important;
+
+    font-size: 18px !important;
+
+    margin-bottom: 18px;
+  }
+
+  .svgIcons {
+    flex-wrap: wrap;
+    gap: 10px !important;
+
+    margin-bottom: 16px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .content ul {
+    padding-top: 0 !important;
+  }
+
+  .content ul p {
+    font-size: 17px !important;
+    line-height: 1.5;
+  }
+
+  .content ul p span {
+    display: block;
+    padding-left: 0 !important;
+    margin-top: 4px;
+  }
+
+  .content li {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .project .projectData {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .p_content {
+    width: 100%;
+    height: auto;
+    padding-bottom: 25px;
+  }
+
+  .p_content .p_img img {
+    width: 85%;
+    height: auto;
+  }
+
+  .p_content .p_text {
+    padding: 0 24px;
+  }
+
+  .p_content .p_text p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .p_content .skill-list {
+    flex-wrap: wrap;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 40px;
+    padding: 140px 24px 120px;
+  }
+
+  .contactTitle {
+    text-align: left;
+  }
+
+  .contactTitle h1 {
+    font-size: 38px;
+  }
+
+  .contactTitle .meText {
+    justify-content: flex-start;
+  }
+
+  .footer > p {
+    padding: 30px 24px 50px;
+  }
+
+  .footer .footerText {
+    width: 100%;
+  }
+
+  /* ===== 모바일 햄버거 ===== */
+.hamburger {
+  display: none;
+}
+
+  .hamburger {
+    display: flex;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    z-index: 2000;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 14px;
+
+    background: rgba(15,15,25,0.7);
+    backdrop-filter: blur(12px);
+
+    color: white;
+    font-size: 26px;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+  }
+
+  .menu {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 260px;
+    height: 100vh;
+
+    margin: 0;
+    padding-top: 120px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 35px;
+
+    border-radius: 0;
+
+    background: rgba(25, 29, 49, 0.47);
+
+    backdrop-filter: blur(18px);
+
+    transition: 0.4s ease;
+
+    z-index: 1500;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .menu a {
+    font-size: 18px;
+  }
+
+
+
+}
+
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  body{
+    padding: 0;;
+  }
+  .heroCrossText h1 {
+    font-size: 22px;
+  }
+
+  .bgText {
+    font-size: 56px;
+  }
+
+  .menu {
+    width: calc(100% - 28px);
+    gap: 8px;
+  }
+
+  .menu a {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+  .boxTitle > h3 {
+    font-size: 32px;
+  }
+
+  .p_content .p_text {
+    padding: 0 18px;
+  }
+
+  .project-btn {
+    flex-wrap: wrap;
+  }
+
+  .contactTitle h1 {
+    font-size: 32px;
+  }
+
+  .hamburger {
+    display: flex;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    z-index: 2000;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 14px;
+
+    background: rgba(15,15,25,0.7);
+    backdrop-filter: blur(12px);
+
+    color: white;
+    font-size: 26px;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+  }
+
+  .menu {
+    position: fixed;
+
+    top: 0;
+    right: -100%;
+
+    width: 260px;
+    height: 100vh;
+
+    margin: 0;
+    padding-top: 120px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 35px;
+
+    border-radius: 0;
+
+    background: rgba(25, 29, 49, 0.47);
+
+    backdrop-filter: blur(18px);
+
+    transition: 0.4s ease;
+
+    z-index: 1500;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .menu a {
+    font-size: 18px;
   }
 }

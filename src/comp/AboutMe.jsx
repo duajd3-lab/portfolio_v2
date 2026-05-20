@@ -8,7 +8,7 @@ function AboutMe() {
         <div className="aboutPage">
 
             <Link to="/" className="backBtn">
-                <img src="/svg/Arrow-left.svg" alt="back" />
+                <img src="/imgs/arrow.png" alt="back" />
             </Link>
 
             <div className="aboutTitle">

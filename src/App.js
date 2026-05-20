@@ -14,6 +14,7 @@ function Home() {
   const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="App">
@@ -46,7 +47,16 @@ function Home() {
 
       </main>
 
-      <nav className="menu">
+      {/* 모바일 햄버거 버튼 */}
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </button>
+
+      {/* 메뉴 */}
+      <nav className={`menu ${menuOpen ? 'active' : ''}`}>
         <a href="#about">ABOUT</a>
         <a href="#skills">SKILLS</a>
         <a href="#project">PROJECT</a>
@@ -249,14 +259,14 @@ function Home() {
                 window.location.href = 'mailto:duajd3@gmail.com';
               }}
             >
-              <img src='./svg/contact-mail.svg' alt='mail' 
-              onClick={(e) => {
-                e.stopPropagation(); //아이콘 클릭 시 메일 보내기(mailto)까지 같이 실행되는 걸 막기 위해서
-                navigator.clipboard.writeText('duajd3@gmail.com'); 
-                setCopied(true);
-                setTimeout(()=>{
-                  setCopied(false);
-                }, 2000);
+              <img src='./svg/contact-mail.svg' alt='mail'
+                onClick={(e) => {
+                  e.stopPropagation(); //아이콘 클릭 시 메일 보내기(mailto)까지 같이 실행되는 걸 막기 위해서
+                  navigator.clipboard.writeText('duajd3@gmail.com');
+                  setCopied(true);
+                  setTimeout(() => {
+                    setCopied(false);
+                  }, 2000);
                 }} />
               duajd3@gmail.com
             </p>
