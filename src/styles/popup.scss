@@ -51,6 +51,48 @@
   }
 }
 
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  z-index: 10;
+
+  &:hover {
+    //transform: rotate(90deg) scale(1.08);
+
+    background: rgba(107, 235, 214, 0.12);
+
+    border-color: rgba(107, 235, 214, 0.45);
+
+    color: #6bebd6;
+
+    box-shadow: 0 0 18px rgba(107, 235, 214, 0.25);
+  }
+}
+
 .mySwiper {
   width: 100%;
   height: 500px;
@@ -121,7 +163,7 @@
   padding: 22px 0;
   border-bottom: 1px solid rgba(145, 147, 255, 0.25);
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 
 .sec-1:last-child {
@@ -145,24 +187,64 @@
 
 .tt2 {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 
-  .url {
-    margin-left: 30px;
-    color: #d8dcff;
-    cursor: pointer;
-    word-break: break-all;
+  .linkBox {
+    display: flex;
+    gap: 12px;
+    //margin-left: 30px;
 
-    &:hover {
-      color: #6bebd6;
-      background: transparent;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      min-width: 110px;
+      height: 42px;
+
+      padding: 0 18px;
+
+      border-radius: 999px;
+      border: 1px solid #314cff;
+
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: all 0.3s ease;
+
+      box-shadow:
+        0 0 12px rgba(107, 235, 214, 0.08),
+        inset 0 0 10px rgba(255, 255, 255, 0.04);
+
+      &:hover {
+        transform: translateY(-2px);
+
+        border-color: #6bebd6;
+
+        background: rgba(107, 235, 214, 0.12);
+
+        box-shadow:
+          0 0 20px rgba(107, 235, 214, 0.25),
+          inset 0 0 12px rgba(255, 255, 255, 0.08);
+
+        color: #6bebd6;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
     }
-  }
-
-  .tt-text {
-    margin-left: 30px;
-    color: #e6e8ff;
-    line-height: 1.8;
   }
 }
 
@@ -258,6 +340,16 @@
     }
   }
 
+  .closeBtn {
+    width: 36px;
+    height: 36px;
+
+    top: 15px;
+    right: 15px;
+
+    font-size: 16px;
+  }
+
   .swiper-slide {
     height: 240px;
   }
@@ -279,7 +371,7 @@
 
     .url,
     .tt-text {
-      margin-left: 0;
+      margin-left: 0px;
       margin-top: 10px;
       font-size: 13px;
     }

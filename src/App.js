@@ -289,6 +289,19 @@ function Home() {
       <section className='footer'>
         <div className='footerText'></div>
         <p>© 2026 nayoung's portfoilo. All rights reserved.</p>
+
+        <button
+          className="glassTopBtn"
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+        >
+          ↑
+        </button>
+
       </section>
 
 

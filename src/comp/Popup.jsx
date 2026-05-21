@@ -31,8 +31,16 @@ function Popup({ setOpen, item }) {
         <div className='modal' ref={modal} onClick={() => { setOpen(false) }} >
 
             <div className='container' ref={container} onClick={(e) => e.stopPropagation()} >
+
+                <div
+                    className='closeBtn'
+                    onClick={() => setOpen(false)}
+                >
+                    ✕
+                </div>
+
                 <span>{item.title}</span>
-                
+
 
                 <>
                     <Swiper
@@ -64,21 +72,21 @@ function Popup({ setOpen, item }) {
 
 
 
-               
 
-                    <section className='sec-1'>
-                        <div className='tt2'>
-                            <div>
-                                <span>개발 기간</span>
-                            </div>
-                            <div className='tt-text'>
 
-                                <div >{item.period}</div>
-
-                            </div>
+                <section className='sec-1'>
+                    <div className='tt2'>
+                        <div>
+                            <span>개발 기간</span>
                         </div>
+                        <div className='tt-text'>
 
-                    </section>
+                            <div >{item.period}</div>
+
+                        </div>
+                    </div>
+
+                </section>
 
                 <div className="details">
                     <section className='sec-1'>
@@ -98,10 +106,24 @@ function Popup({ setOpen, item }) {
                     <section className='sec-1'>
                         <div className='tt2'>
                             <div>
-                                <span>사이트</span>
+                                <span>링크</span>
                             </div>
-                            <div className='url' onClick={() => window.open(item.site)}>
-                                {item.site}</div>
+
+                            <div className='linkBox'>
+                                {item.links?.site && (
+                                    <button onClick={() => window.open(item.links.site, "_blank")}>
+                                        <img src="/svg/link.svg" />
+                                        SITE
+                                    </button>
+                                )}
+
+                                {item.links?.github && (
+                                    <button onClick={() => window.open(item.links.github, "_blank")}>
+                                        <img src="/svg/git-white.svg" />
+                                        GITHUB
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </section>
 

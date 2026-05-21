@@ -9,7 +9,6 @@
             "/imgs/weather3.png",
             "/imgs/weather4.png",
             "/imgs/weather5.png"
-
         ],
         "skills": [
             "HTML5",
@@ -18,11 +17,14 @@
         ],
         "site": "https://duajd3-lab.github.io/Weather-Mood/index.html",
         "team": "4인 팀 프로젝트",
-        "work": [ "코디 페이지 " , "날씨 API 연동"],
+        "work": [
+            "코디 페이지 ",
+            "날씨 API 연동"
+        ],
         "features": [
             "실시간 날씨 데이터를 기반으로 사용자에게 어울리는 코디와 음악을 추천하는 웹 애플리케이션",
             "LocalStorage를 활용해 사용자의 스크랩 상태를 저장하고 다시 방문해도 유지되도록 구현"
-        ], 
+        ],
         "troubleshooting": [
             {
                 "problem": "코디 페이지에서 스크랩 후 팝업을 닫았다가 다시 열면 별 아이콘 상태가 초기화되는 문제 발생",
@@ -32,49 +34,49 @@
             }
         ]
     },
-   
     {
-  "title": "StorePilot",
-  "subTitle": "AI 예측을 활용하여 매장 데이터를 통합적으로 관리할 수 있는 매장 관리 플랫폼",
-  "period": "2026.04.14 - 2026.05.08",
-  "team": "5인 팀 프로젝트",
-  "role": "Frontend / UI 구현 / 메뉴 관리 페이지 담당",
-  "work": [
-    "랜딩 페이지 UI 구현  ",
-    "메뉴 관리 페이지 CRUD 구현  ",
-    "MongoDB 데이터 연동  ",
-    "반응형 레이아웃 및 인터랙션 구현"
-  ],
-  "features": [
-    "매장 데이터를 기반으로 메뉴, 재고, 직원 관리를 통합적으로 관리할 수 있는 플랫폼",
-    "로컬 LLM을 활용해 판매 데이터 분석과 운영 개선 방향을 제안",
-    "메뉴 등록, 수정, 삭제 및 정렬 기능을 통해 관리 효율성 향상"
-  ],
-  "skills": [
-    "Next.js",
-    "SCSS",
-    "NextAuth",
-    "Axios",
-    "MongoDB"
-  ],
-  "site": "https://store-pilot-gold.vercel.app/",
-  "github": "",
-  "images": [
-    "/imgs/landing.PNG"
-  ],
-  "troubleshooting": [
+        "title": "StorePilot",
+        "subTitle": "AI 예측을 활용하여 매장 데이터를 통합적으로 관리할 수 있는 매장 관리 플랫폼",
+        "period": "2026.04.14 - 2026.05.08",
+        "team": "5인 팀 프로젝트",
+        "work": [
+            "랜딩 페이지 UI 구현  ",
+            "메뉴 관리 페이지 CRUD 구현  ",
+            "MongoDB 데이터 연동  ",
+            "반응형 레이아웃 및 인터랙션 구현"
+        ],
+        "features": [
+            "매장 데이터를 기반으로 메뉴, 재고, 직원 관리를 통합적으로 관리할 수 있는 플랫폼",
+            "로컬 LLM을 활용해 판매 데이터 분석과 운영 개선 방향을 제안",
+            "메뉴 등록, 수정, 삭제 및 정렬 기능을 통해 관리 효율성 향상"
+        ],
+        "skills": [
+            "Next.js",
+            "SCSS",
+            "NextAuth",
+            "Axios",
+            "MongoDB"
+        ],
+        "links": {
+            "site": "https://store-pilot-gold.vercel.app/",
+            "github": "https://github.com/duajd3-lab/StorePilot"
+        },
+        "images": [
+            "/imgs/landing.PNG"
+        ],
+        "troubleshooting": [
+            {
+                "problem": "메뉴 수정 기능 실행 시 서버에서 500 에러 발생",
+                "cause": "MongoDB의 _id는 ObjectId 타입이어야 하지만, 프론트에서 전달된 _id 값이 문자열(String) 타입이라 타입 충돌 발생",
+                "solution": "menu 배열을 map()으로 순회하며 각 메뉴의 _id 값을 new ObjectId(obj._id)로 변환한 뒤 updateOne()으로 다시 저장",
+                "result": "MongoDB 타입 충돌 문제를 해결하고 메뉴 수정 기능이 정상 동작하도록 개선"
+            }
+        ]
+    },
     {
-      "problem": "메뉴 수정 기능 실행 시 서버에서 500 에러 발생",
-      "cause": "MongoDB의 _id는 ObjectId 타입이어야 하지만, 프론트에서 전달된 _id 값이 문자열(String) 타입이라 타입 충돌 발생",
-      "solution": "menu 배열을 map()으로 순회하며 각 메뉴의 _id 값을 new ObjectId(obj._id)로 변환한 뒤 updateOne()으로 다시 저장",
-      "result": "MongoDB 타입 충돌 문제를 해결하고 메뉴 수정 기능이 정상 동작하도록 개선"
-    }
-  ]
-},
-     {
         "title": "PORTFOLIO",
         "subTitle": "개인 포트폴리오 웹사이트",
-        "period": "2026.00 - 2026.00",
+        "period": "2026.04 - 2026.05",
         "images": [
             "/imgs/pp.png"
         ],
@@ -85,11 +87,13 @@
         ],
         "site": "https://portfolio-v2-nine-wheat.vercel.app/",
         "team": "개인 프로젝트",
-        "work": [ "기획 / 디자인 / 퍼블리싱 / 프론트엔드 구현" ],
+        "work": [
+            "기획 / 디자인 / 퍼블리싱 / 프론트엔드 구현"
+        ],
         "features": [
             "React와 SCSS를 활용해 개인 역량과 프로젝트를 소개하는 포트폴리오 웹사이트 구현",
             "JSON 파일로 프로젝트 데이터를 관리하여 유지보수 용이성 향상"
-        ], 
+        ],
         "troubleshooting": [
             {
                 "problem": "프로젝트 상세 팝업에서 work 배열 데이터가 한 줄 문자열처럼 출력되는 문제 발생",
@@ -97,13 +101,12 @@
                 "solution": "work 배열을 map() 함수를 사용하여 각 요소를 개별적으로 렌더링하도록 수정",
                 "result": "각 작업 항목이 별도의 요소로 표시되어 가독성 향상"
             }
-            
         ]
     },
     {
         "title": "News",
         "subTitle": "뉴스 검색 및 트렌드 웹 서비스",
-        "period": "2026.00 - 2026.00",
+        "period": "2026.05.04 - 2026.05.15",
         "images": [
             "/imgs/news.png"
         ],
@@ -113,11 +116,13 @@
         ],
         "site": "https://news-silk-three.vercel.app/",
         "team": "개인 프로젝트",
-        "work": [ "기획 / 디자인 / 프론트엔드 구현 / API 연동" ],
+        "work": [
+            "기획 / 디자인 / 프론트엔드 구현 / API 연동"
+        ],
         "features": [
             "Vue.js와 뉴스 API를 활용해 키워드 기반 뉴스를 검색하고 확인할 수 있는 웹사이트 구현",
             "뉴스 트렌드 페이지에서 인기 뉴스와 키워드를 시각적으로 표현하여 사용자에게 최신 뉴스 동향 제공"
-        ], 
+        ],
         "troubleshooting": [
             {
                 "problem": "카테고리를 변경해도 동일한 뉴스가 반복적으로 노출되는 문제 발생",
@@ -125,7 +130,6 @@
                 "solution": "카테고리 변경 시 기존 뉴스 데이터를 초기화하고 새로운 데이터로 교체",
                 "result": "카테고리별로 정확한 뉴스가 표시되어 사용자 경험 향상"
             }
-            
         ]
     }
 ]

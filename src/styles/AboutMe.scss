@@ -147,3 +147,172 @@
     }
   }
 }
+
+
+/* ============ 반응형 ================ */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .aboutPage {
+    padding: 45px 8%;
+  }
+
+  .backBtn {
+    left: 8%;
+
+    img {
+      width: 52px;
+    }
+  }
+
+  .aboutTitle {
+    right: 8%;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .meText::before {
+      width: 55px;
+    }
+  }
+
+  .aboutInner {
+    gap: 40px;
+  }
+
+  .profileCard {
+    width: 260px;
+    padding: 35px 28px;
+  }
+
+  .introduce {
+    max-width: none;
+
+    .introName h2 {
+      font-size: 25px;
+    }
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .aboutPage {
+    padding: 35px 6%;
+  }
+
+  .backBtn {
+    position: static;
+    margin-bottom: 30px;
+
+    img {
+      width: 45px;
+    }
+  }
+
+  .aboutTitle {
+    position: static;
+    text-align: left;
+    margin-bottom: 45px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .meText {
+      justify-content: flex-start;
+    }
+
+    .meText::before {
+      width: 45px;
+    }
+  }
+
+  .aboutInner {
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 0;
+    padding-bottom: 50px;
+  }
+
+  .profileCard {
+    width: 100%;
+    box-sizing: border-box;
+
+    .profileImg {
+      width: 140px;
+      height: 160px;
+    }
+
+    ul > li {
+      padding-left: 0;
+    }
+  }
+
+  .introduce {
+    .introName {
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 23px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+
+  .educationBox {
+    padding: 28px 25px;
+
+    .eduList {
+      p {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+  .aboutPage {
+    padding: 28px 20px;
+  }
+
+  .aboutTitle {
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  .profileCard {
+    padding: 30px 22px;
+
+    ul {
+      font-size: 12px;
+    }
+  }
+
+  .introduce {
+    h4 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .educationBox {
+    margin-top: 30px;
+    padding: 24px 20px;
+
+    h3 {
+      font-size: 15px;
+    }
+  }
+}
