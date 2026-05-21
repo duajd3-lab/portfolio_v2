@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# PORTFOLIO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+개인 포트폴리오 웹사이트입니다.
+React와 SCSS를 활용하여 프로젝트, 기술 스택, 자기소개 등을 시각적으로 표현하였으며,
+반응형 레이아웃과 인터랙션을 통해 사용자 경험을 강화했습니다.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔗 Deploy
 
-### `npm start`
+* SITE : https://portfolio-v2-nine-wheat.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Project Overview
 
-### `npm test`
+기존 정적인 포트폴리오 형식에서 벗어나
+Glassmorphism UI와 인터랙션을 활용하여
+개발자의 분위기와 작업 스타일을 시각적으로 전달하는 것을 목표로 제작했습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+또한 JSON 기반 데이터 구조를 적용하여
+프로젝트 추가 및 유지보수가 용이하도록 구성했습니다.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* React
+* JavaScript
+* SCSS
+* Swiper
 
-### `npm run eject`
+### Deploy
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Vercel
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tools
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* GitHub
+* Figma
+* VSCode
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ✨ Main Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 📱 Responsive Web
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* 모바일 / 태블릿 / PC 반응형 레이아웃 구현
+* 디바이스 크기에 따라 UI 자동 최적화
 
-### Code Splitting
+### 🎨 UI / Interaction
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Glassmorphism 스타일 UI 적용
+* Hover Animation 및 Scroll Interaction 구현
+* Swiper를 활용한 프로젝트 이미지 슬라이드 구현
 
-### Analyzing the Bundle Size
+### 📂 Project Popup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* 프로젝트 클릭 시 상세 팝업 출력
+* 기술 스택, 역할, 트러블 슈팅 내용 제공
 
-### Making a Progressive Web App
+### 🗂 JSON Data Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* 프로젝트 데이터를 JSON으로 관리
+* 유지보수 및 프로젝트 추가 작업 효율 향상
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## ⚡ Troubleshooting
 
-### Deployment
+### 프로젝트 상세 데이터 출력 문제
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### 문제
 
-### `npm run build` fails to minify
+work 배열 데이터가 문자열처럼 한 줄로 출력되는 문제 발생
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 원인
+
+배열 데이터를 map()으로 렌더링하지 않아 문자열 형태로 처리됨
+
+#### 해결
+
+map() 함수를 활용하여 각 항목을 개별 요소로 출력하도록 수정
+
+```jsx
+{item.work.map((work, index) => (
+  <div key={index}>{work}</div>
+))}
+```
+
+#### 결과
+
+프로젝트 역할과 작업 내용의 가독성을 개선
+
+---
+
+## 📁 Folder Structure
+
+```bash
+src
+ ┣ components
+ ┣ styles
+ ┣ data
+ ┣ assets
+ ┗ App.js
+```
+
+---
+
+## 🚀 느낀 점
+
+단순히 프로젝트를 나열하는 포트폴리오가 아닌
+디자인과 인터랙션을 통해 개발자의 분위기와 역량을 함께 전달하는 방향으로 제작했습니다.
+
+특히 반응형 대응과 JSON 기반 구조 설계를 통해
+유지보수성과 재사용성을 고려한 프론트엔드 구조를 경험할 수 있었습니다.
