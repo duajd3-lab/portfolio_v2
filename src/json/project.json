@@ -15,7 +15,10 @@
             "CSS3",
             "JavaScript"
         ],
-        "site": "https://duajd3-lab.github.io/Weather-Mood/index.html",
+        "links": {
+            "site": "https://weather-mood-nine.vercel.app/",
+            "github": "https://github.com/duajd3-lab/WeatherMood"
+        },
         "team": "4인 팀 프로젝트",
         "work": [
             "코디 페이지 ",
@@ -85,7 +88,10 @@
             "SASS",
             "JSON"
         ],
-        "site": "https://portfolio-v2-nine-wheat.vercel.app/",
+        "links": {
+            "site": "https://portfolio-v2-nine-wheat.vercel.app/",
+            "github": "https://github.com/duajd3-lab/portfolio_v2"
+        },
         "team": "개인 프로젝트",
         "work": [
             "기획 / 디자인 / 퍼블리싱 / 프론트엔드 구현"
@@ -114,7 +120,10 @@
             "Vue.js",
             "SASS"
         ],
-        "site": "https://news-silk-three.vercel.app/",
+        "links": {
+            "site": "https://news-silk-three.vercel.app/",
+            "github": "https://github.com/duajd3-lab/news"
+        },
         "team": "개인 프로젝트",
         "work": [
             "기획 / 디자인 / 프론트엔드 구현 / API 연동"
