@@ -65,7 +65,8 @@
             "github": "https://github.com/duajd3-lab/StorePilot"
         },
         "images": [
-            "/imgs/landing.PNG"
+            "/imgs/landing1.PNG",
+            "/imgs/main.PNG"
         ],
         "troubleshooting": [
             {
