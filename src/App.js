@@ -48,12 +48,12 @@ function Home() {
       </main>
 
       {/* 모바일 햄버거 버튼 */}
-      <button
-        className="hamburger"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </button>
+      {!open && (
+        <div className='hamburger'>
+          ☰
+        </div>
+      )}
+
 
       {/* 메뉴 */}
       <nav className={`menu ${menuOpen ? 'active' : ''}`}>
@@ -82,7 +82,7 @@ function Home() {
 
             <Link to="/aboutme" className='aboutMore'>
               <p>ABOUT MORE</p>
-              <img src='./svg/Arrow_right.svg' alt='arrow' />
+              <img src='./imgs/arrow_right.png' alt='arrow' />
             </Link>
 
           </div>
@@ -210,7 +210,7 @@ function Home() {
 
                 <button
                   onClick={() =>
-                    window.open(item.site, '_blank', 'noopener,noreferrer')
+                    window.open(item.links.site, '_blank', 'noopener,noreferrer')
                   }
                 >
                   <img src='./svg/link.svg' className='linkSvg' />
@@ -290,17 +290,20 @@ function Home() {
         <div className='footerText'></div>
         <p>© 2026 nayoung's portfoilo. All rights reserved.</p>
 
-        <button
-          className="glassTopBtn"
-          onClick={() =>
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            })
-          }
-        >
-          ↑
-        </button>
+        {!open && (
+          <button
+            className="glassTopBtn"
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              })
+            }
+          >
+            ↑
+          </button>
+
+        )}
 
       </section>
 

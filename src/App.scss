@@ -296,22 +296,46 @@
   }
 
   .aboutMore {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 
-    cursor: pointer;
+  padding: 10px 16px;
 
-    text-decoration: none;
-    color: inherit;
+  border-radius: 14px;
 
-    &:hover {
-      width: 160px;
-      border-radius: 12px;
-      background: rgba(122, 130, 177, 0.253);
+  cursor: pointer;
 
-    }
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  border: 1px solid transparent;
+  img{
+    width: 30px;
   }
+
+  &:hover {
+    background: rgba(134, 145, 212, 0.12);
+
+    border-color: rgba(145, 147, 255, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+      0 0 20px rgba(145, 147, 255, 0.15),
+      inset 0 0 12px rgba(255, 255, 255, 0.03);
+
+      
+  }
+}
 }
 
 .value-simple {
@@ -690,14 +714,14 @@
 
 
 
+/* ================ 
+                     반응형  ================ */
 
-/* ===== 반응형 ===== */
 
 /* 태블릿 */
 @media (max-width: 1024px) {
   body {
     padding: 0;
-    ;
   }
 
   .heroInner {
@@ -735,7 +759,7 @@
   .skills .content>h4 {
     width: 100%;
     font-size: 25px;
-    width: 390px;
+    
   }
 
   .skills .content .svgIcons {
@@ -803,7 +827,7 @@
   }
 
   .menu {
-    width: calc(100% - 40px);
+    
     height: 54px;
     margin-top: 120px;
     top: 20px;
@@ -851,13 +875,13 @@
     flex-wrap: wrap;
   }
 
-  /* ===== SKILLS 모바일 4분할 ===== */
+  /*  SKILLS 모바일 4분할 */
   .skills {
     padding: 120px 24px 0;
   }
 
   .skill-1 {
-    //display: grid;
+    /* display: grid; */
 
     grid-template-columns: 1fr 1fr;
 
@@ -975,7 +999,7 @@
     width: 100%;
   }
 
-  /* ===== 모바일 햄버거 ===== */
+  /*  모바일 햄버거  */
   .hamburger {
     display: none;
   }
@@ -1049,11 +1073,6 @@
 
 /* 작은 모바일 */
 @media (max-width: 480px) {
-  body {
-    padding: 0;
-    ;
-  }
-
   .heroCrossText h1 {
     font-size: 22px;
   }
@@ -1062,22 +1081,32 @@
     font-size: 56px;
   }
 
-  .menu {
-    width: calc(100% - 28px);
-    gap: 8px;
-  }
-
-  .menu a {
-    font-size: 11px;
-    letter-spacing: 0;
-  }
-
-  .boxTitle>h3 {
+  .boxTitle > h3 {
     font-size: 32px;
   }
 
-  .p_content .p_text {
-    padding: 0 18px;
+  .skill-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skill-1 .content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .svgIcons img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .menu {
+    width: 240px;
+  }
+
+  .menu a {
+    font-size: 18px;
   }
 
   .project-btn {
@@ -1086,94 +1115,5 @@
 
   .contactTitle h1 {
     font-size: 32px;
-  }
-
-  .skills {
-    padding: 120px 24px 0;
-  }
-
-   .skill-1 {
-     display: flex;
-    flex-direction: column;
-
-    gap: 16px;
-    }
-
-    .skill-1 .content {
-  width: 100%;
-  max-width: 100%;
-}
-
-.svgIcons {
-  flex-wrap: wrap;
-  gap: 10px;
-
-  img {
-    width: 32px;
-  }
-}
-  
-
-
-  .hamburger {
-    display: flex;
-
-    position: fixed;
-    top: 20px;
-    right: 20px;
-
-    z-index: 2000;
-
-    width: 52px;
-    height: 52px;
-
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 14px;
-
-    background: rgba(15, 15, 25, 0.7);
-    backdrop-filter: blur(12px);
-
-    color: white;
-    font-size: 26px;
-
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-  }
-
-  .menu {
-    position: fixed;
-
-    top: 0;
-    right: -100%;
-
-    width: 260px;
-    height: 100vh;
-
-    margin: 0;
-    padding-top: 120px;
-
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 35px;
-
-    border-radius: 0;
-
-    background: rgba(25, 29, 49, 0.47);
-
-    backdrop-filter: blur(18px);
-
-    transition: 0.4s ease;
-
-    z-index: 1500;
-  }
-
-  .menu.active {
-    right: 0;
-  }
-
-  .menu a {
-    font-size: 18px;
   }
 }

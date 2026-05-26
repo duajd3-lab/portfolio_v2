@@ -111,21 +111,32 @@ function Popup({ setOpen, item }) {
 
                             <div className='linkBox'>
                                 {item.links?.site && (
-                                    <button onClick={() => window.open(item.links.site, "_blank")}>
-                                        <img src="/svg/link.svg" />
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            window.open(item.links.site, "_blank", "noopener,noreferrer");
+                                        }}
+                                    >
+                                        <img src="/svg/link.svg" alt="" />
                                         SITE
                                     </button>
                                 )}
 
                                 {item.links?.github && (
-                                    <button onClick={() => window.open(item.links.github, "_blank")}>
-                                        <img src="/svg/git-white.svg" />
+                                    <button
+                                        onClick={() =>
+                                            window.open(item.links.github.trim(), "_blank")
+                                        }
+                                    >
+                                        <img src="/svg/git-white.svg" alt="" />
                                         GITHUB
                                     </button>
                                 )}
+
                             </div>
                         </div>
                     </section>
+
 
                     <section className='sec-1'>
                         <div className='tt2'>
